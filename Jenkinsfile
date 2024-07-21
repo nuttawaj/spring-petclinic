@@ -7,10 +7,10 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh '''pwd
-./mvnw clean compile
+mvn clean compile
 pwd'''
         sh 'pwd'
       }
