@@ -1,12 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('shell') {
       steps {
-        dir(path: '/var/jenkins_home/workspace/spring-petclinic2_master') {
-          sh './mvnw clean compile'
-        }
-
+        sh 'pwd'
       }
     }
 
