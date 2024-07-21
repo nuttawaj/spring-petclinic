@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Test'
         git(url: 'https://github.com/nuttawaj/spring-petclinic', branch: 'master')
+        sh './mvnw clean compile'
       }
     }
 
