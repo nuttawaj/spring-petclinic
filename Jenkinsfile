@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh '''pwd
+./mvnw clean compile
+pwd'''
+        sh 'pwd'
+      }
+    }
+
   }
 }
