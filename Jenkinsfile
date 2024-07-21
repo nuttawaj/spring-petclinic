@@ -1,18 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('shell') {
+    stage('Build') {
       steps {
-        sh 'pwd'
-      }
-    }
-
-    stage('error') {
-      steps {
-        sh '''pwd
-.mvnw clean compile
-pwd'''
-        sh 'pwd'
+        echo 'Test'
       }
     }
 
