@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Test'
-        git(url: 'https://github.com/nuttawaj/spring-petclinic', branch: 'master')
-        sh './mvnw clean compile'
+        dir(path: '/var/jenkins_home/workspace/spring-petclinic2_master') {
+          sh './mvnw clean compile'
+        }
+
       }
     }
 
